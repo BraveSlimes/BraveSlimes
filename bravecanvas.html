@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="커뮤니티가 직접 만드는 P2E(Participate-to-Earn) NFT 프로젝트 용감한 슬라임입니다! 'Brave Slimes' is a special P2E(Participate-to-Earn) NFT project that allows the users to contribute to the production and selection of the collectibles!">
+    <meta name="keywords" content="brave canvas, brave slimes, brave, slimes, 용감한 슬라임, 슬라임, crypto, klaytn, nft, digital asset, 슬라임 nft, slime nft, 클레이튼 슬라임, team lv999, 용기">
+    <meta name="author" content="TEAM LV999">
+
+    <title>Brave Canvas</title>
+    <link rel="stylesheet" href="style_bravecanvas.css">
+    <script defer src="script_bravecanvas.js"></script>
+</head>
+<body>
+    <h1 id="title">BRAVE CANVAS</h1>
+    <h2 id="description">Make Your Own Slime!</h2>
+    <p id="notice">(NOTICE : This website is optimized for desktop)</p>
+    <div id="selector-container">
+        <div id="slime-selector">
+            <div id="slime-selected">
+                <img id="slime-selected-image" src="bravecanvas_sprites/Slime_01.png" alt="Red Slime">
+                <p id="slime-selected-text">Select a Slime</p>
+                <img id="slime-arrow" src="bravecanvas_sprites/arrow.png" alt="Dropdown Arrow">
+            </div>
+
+            <ul id="slime-list" class="slime-hide">
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_01.png" alt="Red Slime">
+                    <p>Red Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_02.png" alt="Orange Slime">
+                    <p>Orange Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_03.png" alt="Yellow Slime">
+                    <p>Yellow Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_04.png" alt="Green Slime">
+                    <p>Green Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_05.png" alt="Teal Slime">
+                    <p>Teal Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_06.png" alt="Blue Slime">
+                    <p>Blue Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_07.png" alt="Purple Slime">
+                    <p>Purple Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_08.png" alt="Pink Slime">
+                    <p>Pink Slime</p>
+                </li>
+                <li class="slime-option">
+                    <img src="bravecanvas_sprites/Slime_09.png" alt="White Slime">
+                    <p>White Slime</p>
+                </li>
+                <li class="slime-option" id="last-slime">
+                    <img src="bravecanvas_sprites/Slime_10.png" alt="Black Slime">
+                    <p>Black Slime</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="background-selector">
+            <div id="background-selected">
+                <img id="background-selected-image" src="bravecanvas_sprites/Background_01.png" alt="Red Background">
+                <p id="background-selected-text">Select a BG</p>
+                <img id="background-arrow" src="bravecanvas_sprites/arrow.png" alt="Dropdown Arrow">
+            </div>
+
+            <ul id="background-list" class="background-hide">
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_01.png" alt="Red Background">
+                    <p>Red BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_02.png" alt="Orange Background">
+                    <p>Orange BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_03.png" alt="Yellow Background">
+                    <p>Yellow BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_04.png" alt="Green Background">
+                    <p>Green BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_05.png" alt="Teal Background">
+                    <p>Teal BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_06.png" alt="Blue Background">
+                    <p>Blue BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_07.png" alt="Purple Background">
+                    <p>Purple BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_08.png" alt="Pink Background">
+                    <p>Pink BG</p>
+                </li>
+                <li class="background-option">
+                    <img src="bravecanvas_sprites/Background_09.png" alt="White Background">
+                    <p>White BG</p>
+                </li>
+                <li class="background-option" id="last-background">
+                    <img src="bravecanvas_sprites/Background_10.png" alt="Black Background">
+                    <p>Black BG</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapper">
+        <canvas id="download"></canvas>
+        <canvas id="whiteboard"></canvas>
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+        <canvas id="canvas3"></canvas>
+        <canvas id="canvas4"></canvas>
+        <canvas id="canvas5"></canvas>
+    </div>
+    <div id="color-container">
+        <div id="container">
+            <button id="--red-xd"></button>
+            <button id="--red-d"></button>
+            <button id="--red-l"></button>
+            <button id="--red-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--orange-xd"></button>
+            <button id="--orange-d"></button>
+            <button id="--orange-l"></button>
+            <button id="--orange-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--yellow-xd"></button>
+            <button id="--yellow-d"></button>
+            <button id="--yellow-l"></button>
+            <button id="--yellow-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--green-xd"></button>
+            <button id="--green-d"></button>
+            <button id="--green-l"></button>
+            <button id="--green-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--teal-xd"></button>
+            <button id="--teal-d"></button>
+            <button id="--teal-l"></button>
+            <button id="--teal-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--blue-xd"></button>
+            <button id="--blue-d"></button>
+            <button id="--blue-l"></button>
+            <button id="--blue-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--purple-xd"></button>
+            <button id="--purple-d"></button>
+            <button id="--purple-l"></button>
+            <button id="--purple-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--pink-xd"></button>
+            <button id="--pink-d"></button>
+            <button id="--pink-l"></button>
+            <button id="--pink-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--white-xd"></button>
+            <button id="--white-d"></button>
+            <button id="--white-l"></button>
+            <button id="--white-xl"></button>
+        </div>
+        <div id="container">
+            <button id="--black-xd"></button>
+            <button id="--black-d"></button>
+            <button id="--black-l"></button>
+            <button id="--black-xl"></button>
+        </div>
+    </div>
+    <div id="tool-container">
+        <button id="outline">OUTLINE</button>
+        <button id="eraser">ERASER</button>
+    </div>
+    <div id="setting-container">
+        <button id="reset">RESET</button>
+        <button id="download">DOWNLOAD</button>
+    </div>
+    <input type="file" id="real-input" class="image_inputType_file" accept="img/*">
+    <div id="upload-container">
+        <button id="upload">UPLOAD</button>
+    </div>
+    <div class="empty">
+        
+    </div>
+</body>
+</html>

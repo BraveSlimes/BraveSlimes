@@ -1,0 +1,148 @@
+:root {
+  --color-black: #000000;
+  --color-grey: #e1e2ec;
+  --color-white: #ffffff;
+  --color-transparent: #ffffff00;
+
+  --color-main: #1f2739;
+  --color-sub: #27334e;
+  --color-highlight: #49a2fb;
+
+  --gradient-main: 180deg, #1f2739cc, #1f2739;
+
+  --box-hover: #1f2739bf;
+  --box-background: #ffffff1a;
+  --box-shadow: 0 4px 4px 4px #0000001a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-main);
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  color: var(--color-white);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  margin-top: 64px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--color-grey);
+  word-break: keep-all;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.arcade_wrapper {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.arcade_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.arcade_item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.arcade_item:hover div {
+  opacity: 1;
+}
+
+.arcade_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arcade_item div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background-color: var(--box-hover);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.arcade_item div p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: var(--color-white);
+  word-break: keep-all;
+}
+
+.arcade_item div p:nth-child(2) {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.16px;
+  color: var(--color-grey);
+  line-height: 24px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .arcade_list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arcade_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .arcade_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
