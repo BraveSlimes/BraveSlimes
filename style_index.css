@@ -497,7 +497,7 @@ main {
   padding: 24px;
 }
 
-.roadmap_content a {
+.roadmap_content div {
   display: flex;
   justify-content: flex-end;
 }
