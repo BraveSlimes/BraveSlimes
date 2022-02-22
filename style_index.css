@@ -135,11 +135,15 @@ h1:hover {
 }
 
 .global_btn {
+  width: auto;
+  height: 24px;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .menu_btn {
+  width: auto;
+  height: 18px;
   display: none;
   position: absolute;
   top: 40px;
@@ -894,6 +898,11 @@ footer {
 
 .sns_link a {
   margin-left: 16px;
+}
+
+.sns_link a img {
+  width: auto;
+  height: 24px;
 }
 
 .footer_right p {
