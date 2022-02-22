@@ -7,6 +7,7 @@
   --color-main: #1f2739;
   --color-sub: #27334e;
   --color-highlight: #49a2fb;
+  --color-untouchable: #ffffff45;
 
   --gradient-main: 180deg, #1f2739cc, #1f2739;
 
@@ -490,6 +491,48 @@ main {
   text-align: left;
   border-radius: 24px;
   padding: 24px;
+}
+
+.roadmap_content a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.roadmap_completed {
+  width: 172px;
+  height: 48px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  box-shadow: var(--box-shadow);
+  color: var(--color-highlight);
+  background: var(--color-transparent);
+  border: 1px solid var(--color-highlight);
+  border-radius: 24px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.roadmap_completed:hover {
+  color: var(--color-white);
+  background: var(--color-highlight);
+  border: none;
+}
+
+.roadmap_not_completed {
+  width: 172px;
+  height: 48px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  color: var(--color-untouchable);
+  background: var(--color-transparent);
+  border: 1px solid var(--color-untouchable);
+  border-radius: 24px;
+  margin-top: 16px;
 }
 
 .roadmap_title {

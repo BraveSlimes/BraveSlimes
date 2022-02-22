@@ -50,6 +50,10 @@
   --black-xl: #c5c5c5;
 
   --outline: #211f33;
+
+  --color-highlight: #49a2fb;
+  --color-transparent: #ffffff00;
+  --box-shadow: 0 4px 4px 4px #0000001a;
 }
 
 @font-face {
@@ -62,12 +66,14 @@
   margin: 0px;
   padding: 0px;
   list-style: none;
+
+  text-decoration: none;
   font-family: 'neodgm';
 }
 
 body {
   background-color: var(--outline);
-  min-height: 960px;
+  min-height: 1056px;
 }
 
 #title {
@@ -474,11 +480,14 @@ canvas {
   color: var(--white-xl);
   border-color: var(--white-xl);
   background-color: var(--outline);
+  cursor: pointer;
 }
 
 #eraser {
   color: var(--outline);
   background-color: var(--white-xl);
+
+  cursor: pointer;
 }
 
 #setting-container {
@@ -505,12 +514,16 @@ canvas {
   color: var(--white-xl);
   border-color: var(--red-xl);
   background-color: var(--red-xd);
+
+  cursor: pointer;
 }
 
 #download {
   color: var(--white-xl);
   border-color: var(--teal-xl);
   background-color: var(--teal-xd);
+
+  cursor: pointer;
 }
 
 #upload-container {
@@ -531,8 +544,49 @@ canvas {
   color: var(--white-xl);
   border-color: var(--blue-xl);
   background-color: var(--blue-xd);
+  cursor: pointer;
 }
 
 #real-input {
   display: none;
+}
+
+.home_wrapper {
+  position: absolute;
+  top: 1008px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home_btn {
+  border: 1px solid #ffffff;
+  background-color: var(--color-transparent);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 172px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.home_btn:hover {
+  border: none;
+  background-color: var(--color-highlight);
+}
+
+.home_btn img {
+  width: 25px;
+  height: 20px;
+}
+
+.home_btn p {
+  font-family: 'neodgm';
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  margin-left: 12px;
 }

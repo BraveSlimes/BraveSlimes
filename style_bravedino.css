@@ -11,10 +11,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
 
-body {
-  min-height: 100vh;
+  text-decoration: none;
 }
 
 @font-face {
@@ -35,13 +33,14 @@ body {
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: var(--purple);
 }
 
 .wrapper {
   width: 500px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -122,7 +121,6 @@ body {
 
 .btn_wrapper {
   width: 100%;
-  padding-bottom: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,6 +145,45 @@ body {
   font-size: 128px;
   background: #fff;
   text-shadow: var(--shadow);
+}
+
+.home_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.home_btn {
+  border: 1px solid #ffffff;
+  background-color: #ffffff00;
+  box-shadow: 0 4px 4px 4px #0000001a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 172px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.home_btn:hover {
+  border: none;
+  background-color: #49a2fb;
+}
+
+.home_btn img {
+  width: 25px;
+  height: 20px;
+}
+
+.home_btn p {
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-left: 12px;
 }
 
 @keyframes idle {
@@ -196,7 +233,7 @@ body {
     position: relative;
     width: 92px;
     height: 92px;
-    margin-right: 16px;
+    margin-left: 20px;
     animation: idle 0.32s ease-in-out Infinite Alternate;
   }
 
@@ -205,6 +242,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     padding: 16px;
+    margin-right: 20px;
     color: #fff;
     line-height: 24px;
     word-break: keep-all;
@@ -237,9 +275,8 @@ body {
 
   .btn_wrapper {
     width: 360px;
-    margin-right: 6px;
-    margin-bottom: 40px;
-    margin-left: 6px;
+    margin-right: 20px;
+    margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,5 +300,9 @@ body {
     font-size: 96px;
     background: #fff;
     text-shadow: var(--shadow);
+  }
+
+  .home_wrapper {
+    margin-top: 40px;
   }
 }
