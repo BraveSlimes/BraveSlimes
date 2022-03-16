@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'neodgm';
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'neodgm';
+  src: url(./fonts/neodgm.woff) format('woff');
+  src: url(./fonts/neodgm.woff2) format('woff2');
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d9be6;
+}
+
+h1 {
+  font-size: 56px;
+  color: white;
+  text-shadow: 4px 4px 0 black;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-image: url(bravesoulmate_sprites/background.png);
+}
+
+.game {
+  width: 640px;
+  height: 320px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.hole {
+  flex: 1 0 25%;
+  position: relative;
+  z-index: 2;
+}
+
+.hole:after {
+  content: '';
+  display: block;
+  background-image: url(bravesoulmate_sprites/bush.png);
+  position: absolute;
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.mole {
+  opacity: 0;
+  background-image: url(bravesoulmate_sprites/ghost_1.png);
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -1;
+}
+
+.mole.small {
+  background-size: 60%;
+}
+
+.mole.large {
+  background-size: 70%;
+}
+
+.hole.up .mole.large {
+  opacity: 100%;
+  top: -60px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hole.up .mole.small {
+  opacity: 100%;
+  top: -48px;
+  z-index: 3;
+
+  cursor: pointer;
+}
+
+.score {
+  text-align: right;
+  margin-left: 20px;
+  font-size: 56px;
+  color: white;
+  text-shadow: 4px 4px 0 black;
+}
+
+.countdown {
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-break: keep-all;
+}
+
+.start_btn {
+  background: black;
+  font-size: 20px;
+  color: white;
+  width: 172px;
+  height: 48px;
+  border-radius: 24px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+}
+
+.content_wrapper {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.home_wrapper {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home_btn {
+  border: 1px solid #ffffff;
+  background-color: #ffffff00;
+  box-shadow: 0 4px 4px 4px #0000001a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 172px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.home_btn:hover {
+  border: none;
+  background-color: black;
+}
+
+.home_btn img {
+  width: 25px;
+  height: 20px;
+}
+
+.home_btn p {
+  font-family: 'neodgm';
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  margin-left: 12px;
+}
